@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Functions Advanced</h2>
+
+<p>
+call() takes any function arguments separately.<br>
+apply() takes any function arguments as an array.
+</p>
+
+<p id="demo"></p>
+<p id="demo_2"></p>
+
+<script>
+var person = {
+    firstName:"John",
+    lastName: "Doe",
+    fullName: function() {
+        return this.firstName + " " + this.lastName;
+    }
+}
+var myObject = {
+    firstName:"Mary",
+    lastName: "Doe",
+}
+/*x = person.fullName.call(myObject); */
+x = person.fullName.apply(myObject); 
+document.getElementById("demo").innerHTML = x; 
+
+document.getElementById("demo_2").innerHTML = Math.max.call(1,2,3); 
+document.getElementById("demo_2").innerHTML = Math.max.apply(null,[1,2,3]); 
+</script>
+
+</body>
+</html>

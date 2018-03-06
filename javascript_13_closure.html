@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Play with Javascript Closure!</h2>
+
+<p>Exp 1</p>
+<script type="text/javascript">
+/*	var x = 10;
+	function test(){
+		console.log(x);
+		x = 20;
+		console.log(x);
+		var x = 0;
+		console.log(x);
+	}
+	test();
+	console.log(x);*/
+	//test();
+</script>
+
+<p>Exp 2</p>
+<script type="text/javascript">
+	
+	function test(){
+		console.log(x);
+		x = 20;
+		console.log(x);
+	}
+	console.log(x);
+	var x = 10;
+	test();
+	console.log(x);
+</script>
+
+<p>Exp 3</p>
+<script type="text/javascript">
+/*	var x =0;
+	function a(x){
+		function b(y){
+			console.log(x+y);
+		}
+		return b;
+	}
+	x = 1;
+	var addThree = a(3);
+	x = 2;
+	var addFour = a(4);
+	addThree(100);
+	addFour(100);
+	console.log(x);
+	var fd=a(100);
+	fd(100);*/
+</script>
+
+<p>Exp 4</p>
+<script type="text/javascript">
+/*	var x =0;
+	function a(){
+		function b(y){
+			console.log(x+y);
+		}
+		return b;
+	}
+	x = 3;
+	var addThree = a();
+	x = 4;
+	var addFour = a();
+	addThree(100);
+	addFour(100);
+	console.log(x);*/
+</script>
+
+</body>
+</html>

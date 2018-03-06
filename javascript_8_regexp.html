@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Use RegExp Object</p>
+
+<p id="p01">The best things in life are free!</p>
+
+<button onclick="regexp_search()">Use search()</button>
+
+<button onclick="regexp_test()">Use test()</button>
+
+<button onclick="regexp_exec()">Use exec()</button>
+
+<p id="demo"></p>
+
+<script>
+function regexp_search() {
+    text = document.getElementById("p01").innerHTML; 
+    document.getElementById("demo").innerHTML = text.search(/[be]es+/);
+}
+
+function regexp_test() {
+    text = document.getElementById("p01").innerHTML; 
+    document.getElementById("demo").innerHTML = /[ab]es+/.test(text);
+}
+
+function regexp_exec() {
+    text = document.getElementById("p01").innerHTML; 
+    document.getElementById("demo").innerHTML = /[ab]es+/.exec(text);
+}
+</script>
+
+</body>
+</html>

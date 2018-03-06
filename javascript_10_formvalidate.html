@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Enter a number and click OK:</p>
+
+<p>
+<label>Number:</label><br>
+<!-- <input id="id1" type="number" min="100" max="300" required> -->
+<input id="id1" type="password" required><br>
+</p>
+
+<p>
+<label>Full Name:</label><br>
+<input id="id2" type="text" maxlength="10" required><br>
+</p>
+
+<p>
+<label>Postal Code:</label><br>
+<input id="id3" type="text" pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" name="Postal Code" required><br>
+</p>
+
+<button onclick="myFunction()">OK</button>
+
+<p></p>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var inpObj_1 = document.getElementById("id1");
+    var inpObj_2 = document.getElementById("id2");
+    var inpObj_3 = document.getElementById("id3");
+    var msg = "";
+    var msg_always = "";
+    if (inpObj_1.checkValidity() == false) {
+        msg = inpObj_1.validationMessage;
+    }
+    if(inpObj_2.checkValidity() == false){
+        msg += "<br>" + inpObj_2.validationMessage;
+    }
+    if(inpObj_3.checkValidity() == false){
+        msg += "<br>" + inpObj_3.validationMessage;
+    }
+    if(msg==""){
+    	msg = "Input OK";
+    }
+
+    document.getElementById("demo").innerHTML = msg;
+} 
+</script>
+
+</body>
+</html>
