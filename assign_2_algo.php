@@ -61,21 +61,21 @@
 
 
 // echo "<br><br><h2>Question 3</h2>";
-// function insertion_Sort($my_array)
-// {
-// 	for($i=1;$i<count($my_array);$i++){
-//         $temp = $my_array[$i];
-//         for($j=$i-1;$j>=0 && $my_array[$j]>$temp;$j--){
-//             $my_array[$j+1]=$my_array[$j];
-//             $my_array[$j]=$temp;
+function insertion_Sort($my_array)
+{
+	for($i=1;$i<count($my_array);$i++){
+        $temp = $my_array[$i];
+        for($j=$i-1;$j>=0 && $my_array[$j]>$temp;$j--){
+            $my_array[$j+1]=$my_array[$j];
+            $my_array[$j]=$temp;
 
-//             }
+            }
 
-//     }
+    }
     
-//   return $my_array;
+  return $my_array;
 
-// }
+}
 // $test_array = array(3, 0, 2, 5, -1, 4, 1);
 // echo "Original Array :\n";
 // echo implode(', ',$test_array);
@@ -84,29 +84,3 @@
 // print_r(insertion_Sort($test_array));
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-</head>
-<body>
-
-<p id="change">this is a is test</p>
-<button type='button' onclick="A()">UpperCase</button>
-
-<script type="text/javascript">
-    
-function A(){
-    var x=document.getElementById('change').innerHTML;
-    var i;
-    ss=x.split(" ");
-    for(i=0;i<ss.length;i++){
-        ss[i]=ss[i].slice(0,1).toUpperCase()+ss[i].slice(1);
-    }
-    document.getElementById('change').innerHTML=ss.join(' ');
-}
-
-</script>
-
-</body>
-</html>
