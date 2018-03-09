@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+  <title></title>
 </head>
 <style>
 #container {
@@ -19,78 +19,80 @@
 </style>
 <body>
 
-<p id="change">this is a is test</p>
-<button type='button' onclick="A()">UpperCase</button>
+  <p id="change">this is a is test</p>
+  <button type='button' onclick="A()">UpperCase</button>
 
-<script type="text/javascript">
+  <script type="text/javascript">
     
-function A(){
-    var x=document.getElementById('change').innerHTML;
-    var i;
-    ss=x.split(" ");
-    for(i=0;i<ss.length;i++){
+    function A(){
+      var x=document.getElementById('change').innerHTML;
+      var i;
+      ss=x.split(" ");
+      for(i=0;i<ss.length;i++){
         ss[i]=ss[i].slice(0,1).toUpperCase()+ss[i].slice(1);
+      }
+      document.getElementById('change').innerHTML=ss.join(' ');
     }
-    document.getElementById('change').innerHTML=ss.join(' ');
-}
 
-</script>
+  </script>
 
 
-<p id="demo"></p>
- <button type="button" onclick="myTimer()">output current date</button>
+  <p id="demo"></p>
+  <button type="button" onclick="Timer()">output current date</button>
 
-<script type="text/javascript">
-
-    function myTimer(){
+  <script type="text/javascript">
+    function Timer(){
+      function myTimer(){
         var d=new Date();
         var t=d.toLocaleTimeString();
         document.getElementById('demo').innerHTML=t;
-    }
-    var myVar=setInterval(function(){myTimer()},1000);
+      }
+      var myVar=setInterval(function(){myTimer()},1000);
+    // var myVar=setInterval(myTimer,1000);
+  }
 </script>
 
 
 <p>
-<button onclick="myMove()">Click Me</button>
+  <button onclick="myMove()">Click Me</button>
 </p> 
 
 <div id ="container">
-<div id ="animate"></div>
+  <div id ="animate"></div>
 </div>
 
 <script>
-var elem = document.getElementById("animate");
-var num=0;
-function myMove() {
-  num = num +1;
-  if (num%2==1) {  
-  var pos = 0;
-  var id = setInterval(frame, 5);
-  function frame() {
-    if (pos == 350) {
-      clearInterval(id);
-    } else {
-      pos++; 
-      elem.style.top = pos + 'px'; 
-      elem.style.left = pos + 'px'; 
-    }
-    }
+  var elem = document.getElementById("animate");
+  var num=0;
+  function myMove() {
+    num = num +1;
+    if (num%2==1) {  
+      var pos = 0;
+      var id = setInterval(frame, 5);
+      function frame() {
+        if (pos == 350) {
+          clearInterval(id);
+        } else {
+          pos++; 
+          elem.style.top = pos + 'px'; 
+          elem.style.left = pos + 'px'; 
+        }
+      }
     }else{
-        var pos = 350;
-        var id = setInterval(frame, 5);
-     function frame() {
+      var pos = 350;
+      var id = setInterval(iframe, 5);
+      function iframe() {
         if (pos == 0) {
-            clearInterval(id);
+          clearInterval(id);
         } else {
          pos--; 
-        elem.style.top = pos + 'px'; 
-        elem.style.left = pos + 'px'; 
-        }
-        }
-    }
+         elem.style.top = pos + 'px'; 
+         elem.style.left = pos + 'px'; 
+       }
+     }
+   }
 
-}
+ }
 </script>
 
 
